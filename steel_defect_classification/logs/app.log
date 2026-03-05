@@ -1,0 +1,58 @@
+2026-03-05 08:00:14 | INFO     | steel_defect.dataset      | Built file list | total=20 | classes=5
+2026-03-05 08:00:15 | INFO     | steel_defect.dataset      | Built file list | total=20 | classes=5
+2026-03-05 08:00:15 | INFO     | steel_defect.dataset      | Built file list | total=20 | classes=5
+2026-03-05 08:00:15 | INFO     | steel_defect.dataset      | Built file list | total=20 | classes=5
+2026-03-05 08:00:15 | INFO     | steel_defect.dataset      | Built file list | total=20 | classes=5
+2026-03-05 08:00:15 | INFO     | steel_defect.dataset      | Built file list | total=20 | classes=5
+2026-03-05 08:00:15 | INFO     | steel_defect.dataset      | Built file list | total=20 | classes=5
+2026-03-05 08:00:15 | INFO     | steel_defect.dataset      | Built file list | total=20 | classes=5
+2026-03-05 08:00:15 | INFO     | steel_defect.dataset      | Built file list | total=20 | classes=5
+2026-03-05 08:00:15 | INFO     | steel_defect.dataset      | Built file list | total=20 | classes=5
+2026-03-05 08:00:15 | INFO     | steel_defect.dataset      | Built file list | total=20 | classes=5
+2026-03-05 08:00:16 | INFO     | steel_defect.dataset      | Built file list | total=20 | classes=5
+2026-03-05 08:00:16 | INFO     | steel_defect.dataset      | Built file list | total=20 | classes=5
+2026-03-05 08:00:16 | INFO     | steel_defect.dataset      | Built file list | total=20 | classes=5
+2026-03-05 08:00:16 | INFO     | steel_defect.dataset      | Built file list | total=20 | classes=5
+2026-03-05 08:00:17 | INFO     | steel_defect.dataset      | Built file list | total=20 | classes=5
+2026-03-05 08:00:17 | INFO     | steel_defect.dataset      | Built file list | total=20 | classes=5
+2026-03-05 08:00:17 | INFO     | steel_defect.dataset      | Splits created | train=13 | val=3 | test=4
+2026-03-05 08:00:17 | INFO     | steel_defect.dataset      | Built file list | total=20 | classes=5
+2026-03-05 08:00:17 | INFO     | steel_defect.dataset      | Splits created | train=13 | val=3 | test=4
+2026-03-05 08:00:17 | INFO     | steel_defect.dataset      | Built file list | total=20 | classes=5
+2026-03-05 08:00:17 | INFO     | steel_defect.dataset      | Splits created | train=13 | val=3 | test=4
+2026-03-05 08:00:17 | INFO     | steel_defect.dataset      | Built file list | total=20 | classes=5
+2026-03-05 08:00:17 | INFO     | steel_defect.dataset      | Splits created | train=13 | val=3 | test=4
+2026-03-05 08:00:17 | INFO     | steel_defect.dataset      | Built file list | total=20 | classes=5
+2026-03-05 08:00:17 | INFO     | steel_defect.dataset      | Splits created | train=13 | val=3 | test=4
+2026-03-05 08:00:17 | INFO     | steel_defect.dataset      | Splits created | train=13 | val=3 | test=4
+2026-03-05 08:00:17 | INFO     | steel_defect.dataset      | Built file list | total=20 | classes=5
+2026-03-05 08:00:17 | INFO     | steel_defect.dataset      | Splits created | train=13 | val=3 | test=4
+2026-03-05 08:00:17 | INFO     | steel_defect.dataset      | Splits created | train=13 | val=3 | test=4
+2026-03-05 08:00:17 | INFO     | steel_defect.dataset      | Built file list | total=20 | classes=5
+2026-03-05 08:00:17 | INFO     | steel_defect.dataset      | Splits created | train=13 | val=3 | test=4
+2026-03-05 08:00:32 | INFO     | steel_defect.inference    | Model loaded | checkpoint=test_checkpoint.pt | epoch=1 | val_acc=0.500 | time=170ms
+2026-03-05 08:00:32 | INFO     | steel_defect.inference    | Model loaded | checkpoint=test_checkpoint.pt | epoch=1 | val_acc=0.500 | time=141ms
+2026-03-05 08:00:32 | INFO     | steel_defect.inference    | Model loaded | checkpoint=test_checkpoint.pt | epoch=1 | val_acc=0.500 | time=134ms
+2026-03-05 08:00:33 | INFO     | steel_defect.inference    | Model loaded | checkpoint=test_checkpoint.pt | epoch=1 | val_acc=0.500 | time=132ms
+2026-03-05 08:00:33 | INFO     | steel_defect.inference    | Model loaded | checkpoint=test_checkpoint.pt | epoch=1 | val_acc=0.500 | time=166ms
+2026-03-05 08:00:33 | INFO     | steel_defect.inference    | Inference #1 | label=defect_4 | confidence=0.225 | time=180.7ms
+2026-03-05 08:00:33 | INFO     | steel_defect.inference    | Model loaded | checkpoint=test_checkpoint.pt | epoch=1 | val_acc=0.500 | time=153ms
+2026-03-05 08:00:34 | INFO     | steel_defect.inference    | Inference #1 | label=defect_2 | confidence=0.215 | time=183.9ms
+2026-03-05 08:00:34 | INFO     | steel_defect.inference    | Model loaded | checkpoint=test_checkpoint.pt | epoch=1 | val_acc=0.500 | time=165ms
+2026-03-05 08:00:34 | INFO     | steel_defect.inference    | Inference #1 | label=defect_3 | confidence=0.210 | time=261.4ms
+2026-03-05 08:00:34 | INFO     | steel_defect.inference    | Model loaded | checkpoint=test_checkpoint.pt | epoch=1 | val_acc=0.500 | time=124ms
+2026-03-05 08:00:34 | INFO     | steel_defect.inference    | Inference #1 | label=no_defect | confidence=0.211 | time=237.1ms
+2026-03-05 08:00:35 | INFO     | steel_defect.inference    | Model loaded | checkpoint=test_checkpoint.pt | epoch=1 | val_acc=0.500 | time=136ms
+2026-03-05 08:00:35 | INFO     | steel_defect.inference    | Inference #1 | label=defect_1 | confidence=0.218 | time=207.7ms
+2026-03-05 08:00:35 | INFO     | steel_defect.inference    | Model loaded | checkpoint=test_checkpoint.pt | epoch=1 | val_acc=0.500 | time=136ms
+2026-03-05 08:00:35 | INFO     | steel_defect.inference    | Inference #1 | label=defect_4 | confidence=0.224 | time=217.3ms
+2026-03-05 08:00:36 | INFO     | steel_defect.inference    | Model loaded | checkpoint=test_checkpoint.pt | epoch=1 | val_acc=0.500 | time=150ms
+2026-03-05 08:00:36 | INFO     | steel_defect.inference    | Inference #1 | label=defect_1 | confidence=0.222 | time=202.5ms
+2026-03-05 08:00:36 | INFO     | steel_defect.inference    | Model loaded | checkpoint=test_checkpoint.pt | epoch=1 | val_acc=0.500 | time=148ms
+2026-03-05 08:00:36 | INFO     | steel_defect.inference    | Inference #1 | label=no_defect | confidence=0.222 | time=198.9ms
+2026-03-05 08:00:36 | INFO     | steel_defect.inference    | Model loaded | checkpoint=test_checkpoint.pt | epoch=1 | val_acc=0.500 | time=128ms
+2026-03-05 08:00:37 | INFO     | steel_defect.inference    | Inference #1 | label=defect_3 | confidence=0.215 | time=175.9ms
+2026-03-05 08:00:37 | INFO     | steel_defect.inference    | Model loaded | checkpoint=test_checkpoint.pt | epoch=1 | val_acc=0.500 | time=134ms
+2026-03-05 08:00:37 | INFO     | steel_defect.inference    | Inference #1 | label=no_defect | confidence=0.210 | time=162.4ms
+2026-03-05 08:00:37 | INFO     | steel_defect.inference    | Model loaded | checkpoint=test_checkpoint.pt | epoch=1 | val_acc=0.500 | time=142ms
+2026-03-05 08:00:37 | INFO     | steel_defect.inference    | Inference #1 | label=defect_4 | confidence=0.230 | time=160.8ms

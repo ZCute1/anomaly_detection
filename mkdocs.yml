@@ -17,6 +17,14 @@ nav:
   - Usage Guide: usage.md
   - Architecture: architecture.md
   - Advanced - Image Acquisition: advanced-acquisition.md
+  - Homework:
+    - Overview: homework/index.md
+    - Step 1 - Preprocessing: homework/step-1-preprocessing.md
+    - Step 2 - Dataset: homework/step-2-dataset.md
+    - Step 3 - Model: homework/step-3-model.md
+    - Step 4 - Training: homework/step-4-training.md
+    - Step 5 - Inference: homework/step-5-inference.md
+    - Step 6 - App: homework/step-6-app.md
 
 markdown_extensions:
   - admonition
