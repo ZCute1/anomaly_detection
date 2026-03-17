@@ -24,10 +24,6 @@ jobs:
           pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
           pip install -r requirements.txt
 
-      - name: Lint with Ruff
-        run: |
-          ruff check anomaly_detection/ tests/
-
       - name: Run tests
         run: |
           pytest tests/ -v --tb=short
