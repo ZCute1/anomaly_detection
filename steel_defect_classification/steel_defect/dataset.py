@@ -66,8 +66,22 @@ def build_file_list(data_dir: Path | str | None = None) -> list[tuple[str, int]]
     # ┌──────────────────────────────────────────────┐
     # │  DATA-1: Write your code below               │
     # └──────────────────────────────────────────────┘
-    raise NotImplementedError("DATA-1: Implement dataset directory scanning")
+    # raise NotImplementedError("DATA-1: Implement dataset directory scanning")
+    
+    file_list = []
 
+    # iterate over subdirectories in data_dir using Path.iterdir()
+    for folder in data_dir.iterdir():
+      #if it exists
+      if folder.is_dir() and folder.name in CLASS_NAMES:
+        label_index = CLASS_NAMES.index(folder.name)
+
+        #find files in the folder and append to file_list
+        for img_path in folder.iterdir():
+          if img_path.suffix.lower() in IMAGE_EXTENSIONS:
+            file_list.append((str(img_path), label_index))
+
+    return sorted(file_list)
 
 def create_splits(
     file_list: list[tuple[str, int]],
@@ -106,8 +120,27 @@ def create_splits(
     # ┌──────────────────────────────────────────────┐
     # │  DATA-3: Write your code below               │
     # └──────────────────────────────────────────────┘
-    raise NotImplementedError("DATA-3: Implement train/val/test splitting")
+    # raise NotImplementedError("DATA-3: Implement train/val/test splitting")
+    #extract labels
+    labels = [label for _, label in file_list]
 
+    test_ratio = 1.0 - train_ratio - val_ratio
+
+    #First split
+    train_val_list, test_list = train_test_split(file_list, 
+                                                test_size=test_ratio, 
+                                                stratify=labels, 
+                                                random_state=seed)
+
+    train_val_labels = [label for _, label in train_val_list]
+    
+    #Second split
+    val_relative = val_ratio / (train_ratio + val_ratio)
+    train_list,  val_list = train_test_split(train_val_list, 
+                                            test_size=val_relative, 
+                                            stratify=train_val_labels, 
+                                            random_state=seed)
+    return train_list, val_list, test_list
 
 class SteelDataset(Dataset):
     """
@@ -167,8 +200,26 @@ class SteelDataset(Dataset):
         # ┌──────────────────────────────────────────────┐
         # │  DATA-2: Write your code below               │
         # └──────────────────────────────────────────────┘
-        raise NotImplementedError("DATA-2: Implement __getitem__")
+        # raise NotImplementedError("DATA-2: Implement __getitem__")
+        #get path & label
+        image_path, label = self.file_list[idx]
+        
+        #read the image
+        image = cv2.imread(image_path)
 
+        #check if loaded
+        if image is None: 
+          raise FileNotFoundError(f"Could not read image at {image_path}")
+
+        #BGR -> RGB
+        image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+
+        # if there are transforms, apply to the image
+        if self.transform is not None:
+          result = self.transform(image=image)
+          image = result["image"]
+        
+        return image,label
 
 # ── Scaffold — DataLoader helper ──────────────────────────────
 
