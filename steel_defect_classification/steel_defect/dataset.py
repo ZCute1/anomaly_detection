@@ -11,8 +11,8 @@ import albumentations as A
 import cv2
 import numpy as np
 from torch.utils.data import Dataset, DataLoader
-
 from steel_defect.utils import setup_logging, CLASS_NAMES, DATA_DIR, IMAGE_SIZE
+from sklearn.model_selection import train_test_split
 
 logger = setup_logging(__name__)
 
