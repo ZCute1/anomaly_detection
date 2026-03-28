@@ -90,11 +90,30 @@ class SteelPredictor:
         # ┌──────────────────────────────────────────────┐
         # │  INFER-1: Write your code below              │
         # └──────────────────────────────────────────────┘
-        raise NotImplementedError("INFER-1: Load model from checkpoint")
+        # raise NotImplementedError("INFER-1: Load model from checkpoint")
+        if not self.checkpoint_path.exists():
+          raise FileNotFoundError(f"Checkpoint not found at {self.checkpoint_path}. Train the model first!!!")
+        
+        checkpoint = torch.load(self.checkpoint_path, map_location = self.device)
 
+        num_classes = checkpoint.get("num_classes", NUM_CLASSES)
+        model = SteelCNN(num_classes = num_classes)
+        
+        # model = SteelCNN(num_classes=len(CLASS_NAMES))
+
+        #load the weights we trained
+        # model.load_state_dict(torch.load(model_path, map_location = DEVICE))
+        model.load_state_dict(checkpoint["model_state_dict"])
+        model.to(self.device)
+        model.eval()
+
+        self.model = model
+        
         elapsed_ms = (time.perf_counter() - start) * 1000
         logger.info("Model loaded | time=%.0fms", elapsed_ms)
 
+        return model
+        
     def predict(self, image: np.ndarray) -> dict:
         """
         INFER-2: Run classification on a single image.
@@ -137,9 +156,26 @@ class SteelPredictor:
         # ┌──────────────────────────────────────────────┐
         # │  INFER-2: Write your code below              │
         # └──────────────────────────────────────────────┘
-        raise NotImplementedError("INFER-2: Implement prediction pipeline")
-
+        # raise NotImplementedError("INFER-2: Implement prediction pipeline")
+        
+        result = self.transform(image=image)
+        tensor = result["image"].unsqueeze(0).to(self.device)
+        
+        with torch.no_grad():
+          # output = model(image_tensor)
+          logits = self.model(tensor)
+          probabilities = F.softmax(logits, dim=1) #raw scores -> probs
+          confidence, predicted = probabilities.max(dim = 1)
+        
         elapsed_ms = (time.perf_counter() - start) * 1000
+
+        predicted_idx = predicted.item()
+        confidence_val = confidence.item()
+        label = CLASS_NAMES[predicted_idx]
+
+        probs_np = probabilities.squeeze().cpu().numpy()
+        class_scores = {name: float(p) for name, p in zip(CLASS_NAMES, probs_np)}
+        
         self._inference_count += 1
 
         logger.info(
