@@ -300,6 +300,8 @@ def display_result(result: dict, image: np.ndarray, source: str):
     confidence = result["confidence"]
     latency_ms = result["latency_ms"]
 
+    stats_header.subheader("Prediction")
+
     #Display the predicted label using built-in Streamlit colors
     if label == "no_defect":
         stats_label.success(f"STATUS: **{label.upper()}**")
