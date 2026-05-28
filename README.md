@@ -3,8 +3,8 @@ Anomaly-based defect detection system for industrial quality control, built with
 
 Part of the **Building AI-Powered Defect Detection Systems for Industrial Quality Control** course.
 
-Machine Vision Build Project Steel Defect Classifier
-By Zuriel Olu-Silas
+##Machine Vision Build Project Steel Defect Classifier
+###By Zuriel Olu-Silas
 
 This project implements a custom Convolutional Neural Network (CNN) to detect and classify surface defects in steel images using the Severstal Steel Defect Detection Dataset.
 
