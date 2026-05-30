@@ -113,6 +113,8 @@ anomaly_detection/
 ├── tests/                 # Unit tests
 ├── .github/workflows/     # CI/CD pipeline
 ├── Dockerfile             # Container deployment
+├── requirements.txt
+├── Zuriel_Steel_Defect_Project (2) # MY ACTUAL WORK IS HERE
 └── mkdocs.yml             # Docs configuration
 ```
 
