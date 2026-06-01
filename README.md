@@ -72,10 +72,12 @@ The model was trained for 10 epochs using the Adam optimizer (with a learning ra
 - Inference Latency: ~3ms per frame (on NVIDIA T4 GPU)
 
 ## Training Loss Curve
-![Training Loss Curves](docs/images/loss_curve.png)
+<img width="1010" height="318" alt="Screenshot 2026-06-01 at 6 13 44 PM" src="https://github.com/user-attachments/assets/97e53932-c505-4ba5-8d4b-86ec68080ec6" />
 
 ## Evaluation - Confusion Matrix
-![Confusion Matrix](docs/images/confusion_matrix.png)
+<img width="592" height="468" alt="Screenshot 2026-06-01 at 6 13 31 PM" src="https://github.com/user-attachments/assets/74cf25b3-94fd-4057-81d6-1e0662491179" />
+
+
 The model demonstrates an ability to distinguish between defect-free surfaces and specific defect types, though there is some overlap between similar defect classes.
 
 
